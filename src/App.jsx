@@ -496,7 +496,7 @@ const Hero = () => {
       >
         <img
           // CAMBIAR AQUÍ: Tu foto de perfil
-          src="/img/portfolio.png"
+          src={getAssetUrl("/img/portfolio.png")}
           alt="Alberto Pérez"
           className="avatar"
           style={tiltStyle}
@@ -559,7 +559,7 @@ const ProjectCard = ({ project, onOpen }) => {
       <div className="project-card-content">
         <div className="project-image-container">
           <img
-            src={project.image}
+            src={getAssetUrl(project.image)}
             alt={project.title}
             className="project-image"
           />
@@ -613,7 +613,7 @@ const Projects = () => {
             </button>
 
             <img
-              src={selectedProject.image}
+              src={getAssetUrl(selectedProject.image)}
               alt={selectedProject.title}
               className="modal-image"
             />
