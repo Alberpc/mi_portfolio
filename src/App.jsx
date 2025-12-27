@@ -9,6 +9,12 @@ import {
   ChevronRight,
 } from "lucide-react";
 
+import portfolioImg from "./assets/img/portfolio.png";
+import proyectoWoo from "./assets/img/proyecto-woocommerce.png";
+import proyectoLovable from "./assets/img/proyecto-lovable.jpg";
+import proyectoAirtable from "./assets/img/proyecto-airtable.png";
+import proyectoN8n from "./assets/img/proyecto-n8n.png";
+
 // --- UTILIDAD PARA GITHUB PAGES ---
 const getAssetUrl = (path) => {
   // 1. Si es una URL externa, la devuelve tal cual
@@ -29,7 +35,7 @@ const PROJECTS_DATA = [
     title:
       "Automatización de gestión de pedidos y facturación en WooCommerce con IA",
     // CAMBIAR AQUÍ: Sustituye esta URL por la imagen de tu proyecto
-    image: "/img/proyecto-woocommerce.png",
+    image: proyectoWoo,
     description:
       "Procesamiento automático de pedidos cuando el pago se completa. Generación de factura, resumen con IA para logística y notificación interna sin intervención manual.",
     impact: "Reduce errores y tiempo operativo en eCommerce.",
@@ -38,7 +44,7 @@ const PROJECTS_DATA = [
     id: 2,
     title: "Clasificación automática de leads y recomendación de acción con IA",
     // CAMBIAR AQUÍ: Sustituye esta URL por la imagen de tu proyecto
-    image: "/img/proyecto-lovable.jpg",
+    image: proyectoLovable,
     description:
       "Análisis de leads entrantes para clasificarlos por interés (caliente, tibio, frío). La IA genera resumen y acción recomendada y guarda histórico consultable.",
     impact: "Permite priorizar oportunidades desde el primer contacto.",
@@ -47,7 +53,7 @@ const PROJECTS_DATA = [
     id: 3,
     title: "Gestión inteligente de tickets de soporte con agentes IA",
     // CAMBIAR AQUÍ: Sustituye esta URL por la imagen de tu proyecto
-    image: "/img/proyecto-airtable.png",
+    image: proyectoAirtable,
     description:
       "Sistema de gestión de tickets de soporte que comienza con un formulario de incidencias. Agentes de IA analizan el mensaje, evalúan el contexto y asignan una prioridad automática. Según el resultado, el sistema actualiza el estado del ticket y alerta al equipo solo cuando es crítico.",
     impact: "Reduce ruido operativo y acelera la resolución de incidencias",
@@ -56,7 +62,7 @@ const PROJECTS_DATA = [
     id: 4,
     title: "Generación automática de informes con IA",
     // CAMBIAR AQUÍ: Sustituye esta URL por la imagen de tu proyecto
-    image: "img/proyecto-n8n.png",
+    image: proyectoN8n,
     description:
       "Sistema que analiza datos de ventas y genera informes ejecutivos en PDF. Incluye KPIs, tablas y análisis automático enviados por email.",
     impact: "Reporting profesional sin trabajo manual.",
@@ -496,7 +502,7 @@ const Hero = () => {
       >
         <img
           // CAMBIAR AQUÍ: Tu foto de perfil
-          src={getAssetUrl("/img/portfolio.png")}
+          src={portfolioImg}
           alt="Alberto Pérez"
           className="avatar"
           style={tiltStyle}
@@ -559,7 +565,7 @@ const ProjectCard = ({ project, onOpen }) => {
       <div className="project-card-content">
         <div className="project-image-container">
           <img
-            src={getAssetUrl(project.image)}
+            src={project.image}
             alt={project.title}
             className="project-image"
           />
@@ -613,7 +619,7 @@ const Projects = () => {
             </button>
 
             <img
-              src={getAssetUrl(selectedProject.image)}
+              src={selectedProject.image}
               alt={selectedProject.title}
               className="modal-image"
             />
