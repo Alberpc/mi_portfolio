@@ -1,16 +1,57 @@
-# React + Vite
+## 🚀 Flujo de Trabajo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Desarrollo Local
 
-Currently, two official plugins are available:
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
+# → Abre http://localhost:5173
+# → Haz cambios en src/App.jsx
+# → Los cambios se ven automáticamente
+# → Ctrl + C para salir cuando termines
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Desplegar a GitHub Pages
 
-## React Compiler
+```bash
+# 1. Build y preparar archivos
+npm run deploy
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 2. Subir a GitHub
+git commit -m "descripción de cambios"
+git push
 
-## Expanding the ESLint configuration
+# 3. Espera 2-3 minutos
+# 4. Recarga https://alberpc.github.io/mi_portfolio/ con Ctrl + Shift + R
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Añadir Nuevas Imágenes
+
+1. Coloca la imagen en `src/assets/img/nombre.png`
+2. Importa en `App.jsx`:
+
+```javascript
+import nombreImg from "./assets/img/nombre.png";
+```
+
+3. Usa la variable importada (no strings con rutas)
+
+### Estructura del Proyecto
+
+```
+mi_portfolio/
+├── src/
+│   ├── assets/img/     ← Imágenes aquí
+│   ├── App.jsx         ← Código principal
+│   └── main.jsx
+├── dist/               ← Build (generado automáticamente)
+├── index.html          ← Se gestiona automáticamente
+└── vite.config.js      ← Configuración
+```
+
+### Notas Importantes
+
+- ⚠️ NO edites archivos en la raíz (index.html, assets/) manualmente
+- ⚠️ Solo trabaja en la carpeta `src/`
+- ✅ `npm run dev` restaura automáticamente el index.html correcto
+- ✅ `npm run deploy` genera el build de producción

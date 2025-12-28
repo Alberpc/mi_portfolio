@@ -6,10 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "vite build && cp -r dist/* . && echo 'Build completado y copiado a raíz'"
+    "deploy": "npm run build && cp -r dist/* ."
   },
   "dependencies": {
     "lucide-react": "^0.562.0",

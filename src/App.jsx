@@ -487,7 +487,7 @@ const Hero = () => {
       </div>
 
       <h1 className="hero-name">Alberto Pérez</h1>
-      <h2 className="hero-role">Automation & AI Builder</h2>
+      <h2 className="hero-role">Automation & AI Manager</h2>
 
       <p className="hero-bio">
         Automatizo procesos con IA para que empresas y profesionales ahorren
