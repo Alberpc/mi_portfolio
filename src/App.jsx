@@ -11,6 +11,7 @@ import {
 
 // --- IMPORTS DE IMÁGENES ---
 import portfolioImg from "./assets/img/portfolio.png";
+import portfolio2Img from "./assets/img/portfolio2.png";
 import proyectoWoo from "./assets/img/proyecto-woocommerce.png";
 import proyectoLovable from "./assets/img/proyecto-lovable.jpg";
 import proyectoAirtable from "./assets/img/proyecto-airtable.png";
@@ -478,7 +479,7 @@ const Hero = () => {
         onMouseLeave={handleMouseLeave}
       >
         <img
-          src={portfolioImg}
+          src={portfolio2Img}
           alt="Alberto Pérez"
           className="avatar"
           style={tiltStyle}
