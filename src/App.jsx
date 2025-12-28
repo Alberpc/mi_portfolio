@@ -490,8 +490,8 @@ const Hero = () => {
       <h2 className="hero-role">Automation & AI Builder</h2>
 
       <p className="hero-bio">
-        Automatizo tareas repetitivas y construyo sistemas con IA para que
-        ahorres tiempo y escales sin fricción.
+        Ayudo a empresas y profesionales a eliminar tareas manuales repetitivas
+        y propensas a error mediante automatización e IA.
       </p>
 
       <div className="tech-stack">
